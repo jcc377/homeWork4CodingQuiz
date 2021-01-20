@@ -5,17 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="hw4.js"></script>
+
 </head>
 
 <body>
-    <h1 class="header1">A quiz for new Coders<h1>  
-        <body>
-            <div>The Exam Ends In <span id="time">1:00</span> minute!</div>
-        </body>    
-   
+    <h1 class="header1">A quiz for new Coders<h1>
 
+            <div>The Exam Ends In <span id="time">00:20</span> Seconds</div>
 
+            <br>
+
+            <button type ="button" id="startTest">Click to Start Exam</button>
+            <div id="test">
+                <div id="question"></div>
+                <div id="answerChoices">
+                    <div class="answerChoice" id="A" onclick="checkAnswer('A')"></div>
+                    <div class="answerChoice" id="B" onclick="checkAnswer('B')"></div>
+                    <div class="answerChoice" id="C" onclick="checkAnswer('C')"></div>
+                </div>
+
+                <div id="counter"></div>
+                <div id="userProgress"></div>
+            </div>
+
+            <div id="userProgress"></div>
+            <script type="text/javascript" src="hw4.js"></script>
 </body>
 
 </html>
