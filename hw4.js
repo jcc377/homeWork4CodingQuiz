@@ -24,23 +24,8 @@
 //         display = document.querySelector('#time');
 //     startTimer(oneMinute, display);
 // };
+startTest.addEventListener("click", startTest);
 
-window.onload = function(){
-(function(){
-  var counter = 20;
-  setInterval(function() {
-    counter--;
-    if (counter >= 0) {
-      span = document.getElementById("time");
-      span.innerHTML = counter;
-    }
-    if (counter === 0) {
-        alert('sorry, out of time');
-        clearInterval(counter);
-    }
-  }, 1000);
-})();
-};
 
 // ensure object identifiers can't be reassigned 
 const startTest = document.getElementById("startTest");
@@ -93,6 +78,5 @@ ansChoiceB.innerHTML = q.ansChoiceB;
 ansChoiceC.innerHTML = q.ansChoiceC;
 }
 
-startTest.addEventListener("click", startTest);
 
 
