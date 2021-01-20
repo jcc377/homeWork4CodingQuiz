@@ -35,14 +35,31 @@ window.onload = function(){
       span.innerHTML = counter;
     }
     if (counter === 0) {
-        alert('sorry, out of time');
+        alert('Test Over');
         clearInterval(counter);
     }
-  }, 1000);
+  }, 2000);
 })();
 };
+// Question 1 interactive answer
+var submitAnswer1 = function() {
 
-function myQ1Function() {
-    document.getElementById("q1Verbiage").innerHTML = "Hello"
-};
+    var radios = document.getElementsByName('choice');
+    var val= "";
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+           val = radios[i].value; 
+           break;
+         }
+    }
+    
+    if (val == "" ) {
+      alert('please select choice answer');
+    } else if ( val == "Lycurgus" ) {
+      alert('Answer is correct !');
+    } else {
+      alert('Answer is wrong');
+    }
+  };
+
 
