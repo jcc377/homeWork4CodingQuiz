@@ -24,65 +24,25 @@
 //         display = document.querySelector('#time');
 //     startTimer(oneMinute, display);
 // };
-startTest.addEventListener("click", startTest);
-let time;
-function startTestNow() {
-    timeRender();
-    timer = setInterval(counterRender,1000)
-    progressRender();
-    questionRender();
-}
 
-// ensure object identifiers can't be reassigned 
-const startTest = document.getElementById("startTest");
-const test = document.getElementById("test");
-const question = document.getElementById("question");
-const answerChoices = document.getElementById("answerChoices");
-const A = document.getElementById("A");
-const B = document.getElementById("B");
-const C = document.getElementById("C");
-const counter = document.getElementById("counter");
-const userProgress = document.getElementById("userProgress");
-
-// Questions and choices arrays developed Here
-
-let questions = [
-    {
-        question : "Who Brought democracy to Sparta around 520 BC?",
-
-        ansChoiceA : "Lycurgus",
-        ansChoiceB : "Dionysius",
-        ansChoiceC : "Lebron James",
-        correct : "A"
-    }, {
-        question : "What empire invaded modern day Greece in the 490s BC?",
-
-        ansChoiceA : "Persian",
-        ansChoiceB : "Roman",
-        ansChoiceC : "Ottoman",
-        correct : "A"
-    }, {
-        question : "What Greek isle was best known for a Giant Statue?",
-
-        ansChoiceA : "Rhodes",
-        ansChoiceB : "Crete",
-        ansChoiceC : "Ithika",
-        correct : "A"
+window.onload = function(){
+(function(){
+  var counter = 20;
+  setInterval(function() {
+    counter--;
+    if (counter >= 0) {
+      span = document.getElementById("time");
+      span.innerHTML = counter;
     }
-];
+    if (counter === 0) {
+        alert('sorry, out of time');
+        clearInterval(counter);
+    }
+  }, 1000);
+})();
+};
 
-let lastQuestionIndex = questions.length -1;
-let runningQuestionIndex = 0;
-
-function renderQuestion(){
-
-    let q = question[runningQuestionIndex];
-
-question.innterHTML = "<p>" + q.question + "</p>";
-ansChoiceA.innerHTML = q.ansChoiceA;
-ansChoiceB.innerHTML = q.ansChoiceB;
-ansChoiceC.innerHTML = q.ansChoiceC;
-}
-
-
+function myQ1Function() {
+    document.getElementById("q1Verbiage").innerHTML = "Hello"
+};
 
