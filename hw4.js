@@ -94,3 +94,19 @@ var submitAnswer3 = function () {
     }
 };
 
+// Storing user progress with respect to anwering Questions
+function userProgress() {
+    var correctAns = localStorage.getItem("correctAns");
+    var incorrectAns = localStorage.getItem("incorrectAns");
+  
+    if (!correctAns || !incorrectAns) {
+      return;
+    }
+  
+    userEmailSpan.textContent = correctAns;
+    userPasswordSpan.textContent = incorrectAns;
+  }
+
+  localStorage.setItem("correctAns", correctAns);
+  localStorage.setItem("incorrectAns", incorrectAns);
+  renderLastRegistered();
