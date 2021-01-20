@@ -25,7 +25,13 @@
 //     startTimer(oneMinute, display);
 // };
 startTest.addEventListener("click", startTest);
-
+let time;
+function startTestNow() {
+    timeRender();
+    timer = setInterval(counterRender,1000)
+    progressRender();
+    questionRender();
+}
 
 // ensure object identifiers can't be reassigned 
 const startTest = document.getElementById("startTest");
