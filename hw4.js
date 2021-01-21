@@ -16,6 +16,9 @@ window.onload = function () {
     })();
 };
 function startTest(){
+    var x = document.getElementById("styleBegin");
+    
+}
     // start timer here
     // unhide the first question
 }
@@ -69,7 +72,8 @@ var submitAnswer2 = function () {
         alert('please select choice answer');
     } else if (val == "Byzantium") {
         alert('Answer is correct !');
-       
+       // rehides the question
+        // unhides the next question
     } else {
         alert('Answer is wrong');
     }
@@ -91,7 +95,8 @@ var submitAnswer3 = function () {
         alert('please select choice answer');
     } else if (val == "Argyraspides") {
         alert('Answer is correct !');
-       
+       // rehides the question
+        // unhides the next question
     } else {
         alert('Answer is wrong');
     }
