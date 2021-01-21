@@ -20,7 +20,7 @@ function startTest() {
     // if (x.style.display === "none") {
     //     x.style.display === "block";
     }
-}
+
 // start timer here
 // unhide the first question
 // tally answers
