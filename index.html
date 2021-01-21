@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="hw4.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <h1 class="header1">A quiz for new Coders<h1>
-
+<button id="styleBegin">Start Test</button>
             <div>The Exam Ends In <span id="time">00:20</span> Seconds</div>
-
-            <div class="questions1">
+            <!-- question 1 -->
+            <div class="questions1 displayQuestion">
                 <h2 class="question1">Who introduced law to Ancient Sparta?</h2>
                 <br>
                 <form>
@@ -23,8 +23,8 @@
                 </form>
                 <button onclick="submitAnswer1()">Submit Answer</button>
             </div>
-
-            <div class="questions2">
+            <!-- question 2 -->
+            <div class="questions2 displayQuestion">
                 <h3 class="question2">The name of the city before it was called Constantinople was?</h3>
                 <br>
                 <form>
@@ -34,8 +34,8 @@
                 </form>
                 <button onclick="submitAnswer2()">Submit Answer</button>
             </div>
-
-            <div class="questions3">
+            <!-- question 3 -->
+            <div class="questions3 displayQuestion">
                 <h4 class="question3">Alexander The Great's Elite soliders were referred to as?</h4>
                 <br>
                 <form>
@@ -51,7 +51,15 @@
                 <h5>Progress:</h5>
                 <p>Questions Answered Correctly: <span id="correctAns"></span></p>
                 <p>Quesitons Answered Incorrectly: <span id="incorrectAns"></span></p>
-              </div>
+            </div>
+
+<div id="correctAnswers">
+    <h1>Correct Answers: <span id="score"></span></h1>
+    <!-- display # of correct answers -->
+</div>
+
+
+            <script type="text/javascript" src="hw4.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+// timer created and started
 window.onload = function () {
     (function () {
         var counter = 20;
@@ -14,6 +15,21 @@ window.onload = function () {
         }, 1000);
     })();
 };
+function startTest(){
+    // start timer here
+    // unhide the first question
+}
+// tally answers
+var correctAnswers = 0
+
+
+// var currentQuestionIndex = 1
+var startButton = document.getElementById("styleBegin");
+startButton.onclick = startTest;
+var scoreEl = document.getElementById("score");
+// lookup how to change text content in javascript @
+// scoreEl.textContent = Something lookup that will display # of correct ans
+
 // Question 1 interactive answer
 var submitAnswer1 = function () {
 
@@ -30,12 +46,9 @@ var submitAnswer1 = function () {
         alert('please select choice answer');
     } else if (val == "Lycurgus") {
         alert('Answer is correct !');
-        $("#submitAnswer1").click(function() {
-            $("#questions1").fadeOut("slow", function(){})
-        });
-        $("#submitAnswer1").click(function() {
-            $("#questions2").fadeIn("slow", function(){})
-        });
+        correctAnswers ++;
+        // rehides the question
+        // unhides the next question
     } else {
         alert('Answer is wrong');
     }
@@ -56,12 +69,7 @@ var submitAnswer2 = function () {
         alert('please select choice answer');
     } else if (val == "Byzantium") {
         alert('Answer is correct !');
-        $("#submitAnswer2").click(function() {
-            $("#questions2").fadeOut("slow", function(){})
-        });
-        $("#submitAnswer2").click(function() {
-            $("#questions3").fadeIn("slow", function(){})
-        });
+       
     } else {
         alert('Answer is wrong');
     }
@@ -83,30 +91,25 @@ var submitAnswer3 = function () {
         alert('please select choice answer');
     } else if (val == "Argyraspides") {
         alert('Answer is correct !');
-        $("#submitAnswer3").click(function() {
-            $("#questions3").fadeOut("slow", function(){})
-        });
-        // $("#submitAnswer3").click(function() {
-        //     $("#questions2").fadeIn("slow", function(){})
-        // });
+       
     } else {
         alert('Answer is wrong');
     }
 };
 
 // Storing user progress with respect to anwering Questions
-function userProgress() {
-    var correctAns = localStorage.getItem("correctAns");
-    var incorrectAns = localStorage.getItem("incorrectAns");
+// function userProgress() {
+//     var correctAns = localStorage.getItem("correctAns");
+//     var incorrectAns = localStorage.getItem("incorrectAns");
   
-    if (!correctAns || !incorrectAns) {
-      return;
-    }
+//     if (!correctAns || !incorrectAns) {
+//       return;
+//     }
   
-    userEmailSpan.textContent = correctAns;
-    userPasswordSpan.textContent = incorrectAns;
-  }
+//     userEmailSpan.textContent = correctAns;
+//     userPasswordSpan.textContent = incorrectAns;
+//   }
 
-  localStorage.setItem("correctAns", correctAns);
-  localStorage.setItem("incorrectAns", incorrectAns);
-  renderLastRegistered();
+//   localStorage.setItem("correctAns", correctAns);
+//   localStorage.setItem("incorrectAns", incorrectAns);
+//   renderLastRegistered();
