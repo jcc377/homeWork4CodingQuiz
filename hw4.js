@@ -15,13 +15,14 @@ window.onload = function () {
         }, 1000);
     })();
 };
-function startTest(){
+function startTest() {
     var x = document.getElementById("styleBegin");
-    
+    // if (x.style.display === "none") {
+    //     x.style.display === "block";
+    }
 }
-    // start timer here
-    // unhide the first question
-}
+// start timer here
+// unhide the first question
 // tally answers
 var correctAnswers = 0
 
@@ -49,7 +50,7 @@ var submitAnswer1 = function () {
         alert('please select choice answer');
     } else if (val == "Lycurgus") {
         alert('Answer is correct !');
-        correctAnswers ++;
+        correctAnswers++;
         // rehides the question
         // unhides the next question
     } else {
@@ -72,7 +73,7 @@ var submitAnswer2 = function () {
         alert('please select choice answer');
     } else if (val == "Byzantium") {
         alert('Answer is correct !');
-       // rehides the question
+        // rehides the question
         // unhides the next question
     } else {
         alert('Answer is wrong');
@@ -95,7 +96,7 @@ var submitAnswer3 = function () {
         alert('please select choice answer');
     } else if (val == "Argyraspides") {
         alert('Answer is correct !');
-       // rehides the question
+        // rehides the question
         // unhides the next question
     } else {
         alert('Answer is wrong');
@@ -106,11 +107,11 @@ var submitAnswer3 = function () {
 // function userProgress() {
 //     var correctAns = localStorage.getItem("correctAns");
 //     var incorrectAns = localStorage.getItem("incorrectAns");
-  
+
 //     if (!correctAns || !incorrectAns) {
 //       return;
 //     }
-  
+
 //     userEmailSpan.textContent = correctAns;
 //     userPasswordSpan.textContent = incorrectAns;
 //   }
